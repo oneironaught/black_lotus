@@ -1,0 +1,163 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    background-color: #000;
+  }
+  
+  header#landing {
+    position: relative;
+    height: 100vh;
+    background: url('assets/images/black_lotus_logo.jpg') center/cover no-repeat;
+  }
+  
+  header#landing .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  header#landing .landing-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  header#landing h1 {
+    font-size: 4rem;
+    color: purple;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    text-decoration: solid transparent;    
+  }
+  
+  header#landing p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  header#landing .btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: purple;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #navbar {
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    padding: 1rem 0;
+  }
+  
+  #navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 100px;
+
+  }
+  
+  #navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+  
+  section h2 {
+    margin-bottom: 2rem;
+    color: white;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    justify-items: center;
+  }
+  
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  /* Lightbox overlay */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .lightbox.active {
+    display: flex;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid purple transparent;
+    border-radius: 5px;
+  }
+  
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  #booking {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+  
+  #calendly-scheduler {
+    margin: 0 auto;
+    max-width: 800px;
+    border: 2px solid purple;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: #111;
+  }
