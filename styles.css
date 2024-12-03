@@ -1,4 +1,8 @@
-/* styles.css */
+/* General Styling */
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -30,7 +34,7 @@ body {
   }
   
   header#landing h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: purple;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
@@ -65,7 +69,7 @@ body {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 100px;
+    gap: 30px;
 
   }
   
@@ -160,4 +164,100 @@ body {
     text-align: center;
     padding: 2rem;
     background: #111;
+  }
+
+/* General media queries */  
+/* General Reset for Small Devices */
+body {
+    font-size: 16px; /* Default font size for better scaling */
+  }
+  
+  /* Small Devices (Portrait Tablets and Large Phones) */
+  @media (max-width: 768px) {
+    #navbar ul {
+      flex-direction: row; /* Stack navigation items vertically */
+      align-items: center;
+      overflow: hidden;
+      gap: 5px;
+    }
+  
+    #navbar ul li a {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+  
+    header#landing h1 {
+      font-size: 2rem;
+    }
+  
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller images in the grid */
+    }
+  
+    .gallery-item img {
+      border-width: 1px; /* Thin borders for smaller images */
+    }
+  
+    #booking iframe,
+    #calendly-scheduler {
+      width: 100%; /* Ensure full width for the Calendly widget */
+    }
+  }
+  
+  /* Extra Small Devices (Phones) */
+  @media (max-width: 480px) {
+    header#landing h1 {
+      font-size: 1.8rem; /* Reduce header font size */
+    }
+  
+    header#landing p {
+      font-size: 1rem; /* Adjust subtitle font size */
+    }
+  
+    .btn {
+      padding: 0.5rem 1rem; /* Smaller buttons */
+      font-size: 0.9rem;
+    }
+  
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller grid items */
+    }
+  
+    footer p {
+      font-size: 0.8rem; /* Smaller footer text */
+    }
+  
+    footer .social-icons a {
+      font-size: 1rem; /* Smaller social icons */
+    }
+  }
+  
+  /* Medium Devices (Laptops and Desktops) */
+  @media (min-width: 1024px) {
+    #navbar ul {
+      justify-content: space-between; /* Spaced-out navigation */
+    }
+  
+    header#landing h1 {
+      font-size: 3rem; /* Larger font size for desktops */
+    }
+  
+    .gallery {
+      grid-template-columns: repeat(4, 1fr); /* Four columns for larger screens */
+    }
+  }
+  
+  /* Large Devices (Extra Wide Screens) */
+  @media (min-width: 1440px) {
+    header#landing h1 {
+      font-size: 4rem; /* Max header size for very large screens */
+    }
+  
+    .gallery {
+      grid-template-columns: repeat(5, 1fr); /* Five columns for extra wide screens */
+    }
+  
+    footer {
+      font-size: 1.2rem; /* Slightly larger footer text */
+    }
   }
