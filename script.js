@@ -52,3 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+  
+    // Add 'scrolled' class when the user scrolls
+    window.addEventListener("scroll", () => {
+      if (!body.classList.contains("scrolled")) {
+        body.classList.add("scrolled");
+      }
+    });
+  });
