@@ -10,7 +10,6 @@ body {
     background-color: #000;
   }
 
-
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700&display=swap');
   
@@ -55,21 +54,32 @@ section {
   -webkit-background-clip: text; /* Clips the background to the text */
   -webkit-text-fill-color: transparent; /* Makes the gradient visible */
 }
+
+#landing h1:hover {
+  text-shadow: 4px 4px 10px rgba(255, 0, 0, 0.9); /* Larger shadow on hover */
+  transform: scale(1.1); /* Slightly enlarge the text */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
   
-  header#landing p {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-  }
-  
-  header#landing .btn {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.8rem 1.5rem;
-    background-color: purple;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
+#landing p {
+  font-family: 'Poppins', sans-serif; /* Choose a modern and clean font */
+  font-size: 1.2rem; /* Adjust size for readability */
+  color: #fff; /* Use white text for contrast */
+  text-align: center; /* Center-align the text */
+  margin-top: 1rem; /* Add spacing between the heading and paragraph */
+  letter-spacing: 1px; /* Add slight spacing between letters */
+  line-height: 1.6; /* Improve readability by increasing line height */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for depth */
+  background: linear-gradient(90deg, #ff0000, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Optional: Add hover effect for fun interactivity */
+#landing p:hover {
+  color: #ff0000; /* Change color on hover */
+  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
 
   .scroll-indicator {
     position: absolute;
