@@ -43,7 +43,7 @@ section {
   
   /* Styling the Landing Section h1 */
 #landing h1 {
-  font-family: 'Cinzel', serif; /* Stylish serif font */
+  font-family: 'Roboto', serif; /* Stylish serif font */
   font-size: 3rem; /* Adjust size as needed */
   color: red;
   text-transform: uppercase; /* Optional: Makes the text uppercase */
