@@ -228,7 +228,7 @@ header#landing .landing-content {
 }
 
 #navbar-menu li a:hover {
-  color: #ff4d4d;
+  color: #02cdbf;
 }
 
 /* Hamburger Menu Button */
@@ -360,14 +360,14 @@ header#landing .landing-content {
   text-align: center;
   border: none;
   border-radius: 5px;
-  background-color: #4caf50; /* Green background */
+  background-color: #02cdbf; /* Green background */
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 #submit-payment:hover {
-  background-color: #388e3c; /* Darker green on hover */
+  background-color: #000; /* black on hover */
 }
 
 /* Payment Message Styling */
@@ -423,7 +423,23 @@ header#landing .landing-content {
 }
 
 /* ==============================
-   8. FOOTER STYLING
+   8. Contact Styling
+================================= */
+.email-link {
+  color: gray;
+  text-decoration: none;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.email-link:hover {
+  color: #02cdbf; /* Example hover color */
+  text-decoration: underline;
+}
+
+
+/* ==============================
+   9. FOOTER STYLING
 ================================= */
 footer {
   text-align: center;
