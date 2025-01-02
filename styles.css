@@ -1,91 +1,103 @@
-/* General Styling */
-html {
-    scroll-behavior: smooth;
-  }
+/* ==============================
+   1. GENERAL STYLING
+================================= */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-color: #000;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
 
-body {
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #fff;
-    background-color: #000;
-  }
+main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700&display=swap');
-  
-/* Default: Show all sections */
+
+/* Default section styling */
 section {
-    display: block;
-  }  
-  
-  header#landing {
-    position: relative;
-    height: 100vh;
-    background: url('assets/images/black_lotus_logo.jpg') center/cover no-repeat;
-  }
-  
-  header#landing .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-  }
-  
-  header#landing .landing-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  /* Styling the Landing Section h1 */
-#landing h1 {
-  font-family: 'Roboto', serif; /* Stylish serif font */
-  font-size: 3rem; /* Adjust size as needed */
-  color: white;
-  text-transform: uppercase; /* Optional: Makes the text uppercase */
+  display: block;
+  padding: 3rem 1.5rem;
   text-align: center;
-  letter-spacing: 2px; /* Adds spacing between letters */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Creates a shadow effect */
-  background: linear-gradient(90deg, white, #797676); /* Gradient text effect */
-  -webkit-background-clip: text; /* Clips the background to the text */
-  -webkit-text-fill-color: transparent; /* Makes the gradient visible */
 }
 
-#landing h1:hover {
-  text-shadow: 4px 4px 10px #797676(255, 0, 0, 0.9); /* Larger shadow on hover */
-  transform: scale(1.1); /* Slightly enlarge the text */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
-  cursor: pointer;
+/* ==============================
+   2. LANDING SECTION
+================================= */
+header#landing {
+  position: relative;
+  height: 100vh;
+  background: url('assets/images/black_lotus_logo.jpg') center/cover no-repeat;
 }
-  
-#landing p {
-  font-family: 'Poppins', sans-serif; /* Choose a modern and clean font */
-  font-size: 1.2rem; /* Adjust size for readability */
-  color: #fff; /* Use white text for contrast */
-  text-align: center; /* Center-align the text */
-  margin-top: 1rem; /* Add spacing between the heading and paragraph */
-  letter-spacing: 1px; /* Add slight spacing between letters */
-  line-height: 1.6; /* Improve readability by increasing line height */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for depth */
+
+header#landing .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+header#landing .landing-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Landing H1 Styling */
+#landing h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   background: linear-gradient(90deg, white, #797676);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Optional: Add hover effect for fun interactivity */
+#landing h1:hover {
+  text-shadow: 4px 4px 10px rgba(121, 118, 118, 0.9);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Landing Paragraph Styling */
+#landing p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
 #landing p:hover {
-  color: #797676; /* Change color on hover */
-  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+  color: #797676;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Gray and White Button Style */
+/* ==============================
+   3. BUTTON STYLING
+================================= */
 .btn-gray-white {
-  background: linear-gradient(90deg, #d1d1d1, #f5f5f5); /* Gradient from light gray to white */
-  color: #333; /* Dark gray text */
+  background: linear-gradient(90deg, #d1d1d1, #f5f5f5);
+  color: #333;
   border: 1px solid #ccc;
   font-size: 1rem;
   font-weight: 600;
@@ -99,354 +111,249 @@ section {
   display: inline-block;
 }
 
-
-/* Hover Effect */
 .btn-gray-white:hover {
-  transform: scale(1.1); /* Enlarge button by 10% */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
-/* Active State (when clicked) */
 .btn-gray-white:active {
-  transform: scale(1.05); /* Slightly smaller when clicked */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Slight shadow reduction */
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-  
-  #navbar {
-    position: sticky;
-    top: 0;
-    background-color: #111;
-    padding: 1rem 0;
-  }
-  
-  #navbar ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  #navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-  }
-  
-  section {
-    padding: 3rem 1.5rem;
-    text-align: center;
-  }
-  
-  section h2 {
-    margin-bottom: 2rem;
-    color: white;
-  }
-  
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-    justify-items: center;
-  }
-  
-  .gallery-item {
-    overflow: hidden;
-    border-radius: 5px;
-  }
-  
-  .gallery-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .gallery-item img:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-  }
 
-  /* Lightbox overlay */
-.lightbox {
-    position: fixed;
-    top: 0;
+/* ==============================
+   NAVBAR STYLING
+================================= */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #111;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ==============================
+   NAVBAR BRAND (Logo + Text)
+================================= */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  gap: 0.5rem; /* Space between logo and text */
+  margin-left: -5rem; /* Move brand further to the left */
+
+}
+
+.navbar-brand img.logo {
+  width: 50px; /* Adjust the size of the logo */
+  height: auto;
+  border-radius: 5px; /* Optional rounded corners */
+}
+
+.navbar-brand span {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navbar Menu */
+#navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar-menu li {
+  margin: 0;
+}
+
+#navbar-menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+#navbar-menu li a:hover {
+  color: #ff4d4d;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ==============================
+   5. SECTION BACKGROUNDS
+================================= */
+#portfolio {
+  background-color: #333;
+}
+
+#artists {
+  background-color: #222;
+}
+
+#booking {
+  background-color: #111;
+  width: 100%;
+  padding: 3rem 1.5rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#contact {
+  background-color: #000;
+}
+
+/* ==============================
+   6. GALLERY STYLING
+================================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ==============================
+   7. PAYMENT FORM
+================================= */
+#payment-form {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#card-element {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
+
+/* ==============================
+   8. FOOTER STYLING
+================================= */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #fff;
+}
+
+.footer-logo img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Social Icons */
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a .fa-facebook { color: #1877F2; }
+.social-icons a .fa-instagram { color: #E1306C; }
+.social-icons a .fa-twitter { color: #1DA1F2; }
+
+.social-icons a:hover { color: white; }
+
+/* ==============================
+   9. CALENDLY SCHEDULER
+================================= */
+#calendly-scheduler {
+  margin: 0 auto;
+  max-width: 800px;
+  border: 2px solid purple;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  #navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    background: #111;
+    padding: 1rem;
   }
-  
-  .lightbox.active {
+
+  #navbar-menu.active {
     display: flex;
   }
-  
-  .lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border: 2px solid purple transparent;
-    border-radius: 5px;
-  }
-  
-  .lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-  }
 
-  /* booking */
-
-  #booking {
-    padding: 3rem 1.5rem;
-    text-align: center;
-  }
-
-  /* payment */
-
-  #payment-form {
-    margin-top: 1rem;
-    text-align: center;
-  }
-  
-  #card-element {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 1rem;
-    background-color: #fff;
-  }
-  
-  #submit-payment {
-    margin-top: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  #payment-message {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: green;
-  }
-
-  .alternative-payment-methods {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-#apple-pay-button button,
-#google-pay-button button {
-  display: block;
-  width: 200px;
-  margin: 10px auto;
-  padding: 10px;
-  font-size: 1rem;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#apple-pay-button button {
-  background: #000;
-  color: #fff;
-}
-
-#google-pay-button button {
-  background: #4285F4;
-  color: #fff;
-}
-  
-  .hidden {
-    display: none;
-  }
-
-  /* calendly */
-  
-  #calendly-scheduler {
-    margin: 0 auto;
-    max-width: 800px;
-    border: 2px solid purple;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  /* Footer Styling */
-  
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #111;
-    color: #fff;
-  }
-  
-  .footer-logo img {
-    max-width: 100px; /* Adjust logo size */
-    margin-bottom: 1rem; /* Add spacing below the logo */
-  }
-  
-  footer p {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-  }
-  
- /* Base styles for all social icons */
-.social-icons a {
-    margin: 0 0.5rem;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  /* Specific colors for each social media icon */
-  .social-icons a .fa-facebook {
-    color: #1877F2; /* Facebook blue */
-  }
-  
-  .social-icons a .fa-facebook:hover {
-    color: #145DB2; /* Darker blue on hover */
-  }
-  
-  .social-icons a .fa-instagram {
-    color: #E1306C; /* Instagram pink */
-  }
-  
-  .social-icons a .fa-instagram:hover {
-    color: #C2185B; /* Darker pink on hover */
-  }
-  
-  .social-icons a .fa-twitter {
-    color: #1DA1F2; /* Twitter blue */
-  }
-  
-  .social-icons a .fa-twitter:hover {
-    color: #0D95E8; /* Darker blue on hover */
-  }
-  
-  /* Add other social media colors as needed */
-
-/* General media queries */  
-  
-  /* Small Devices (Portrait Tablets and Large Phones) */
-  @media (max-width: 768px) {
-    #navbar ul {
-      flex-direction: row; /* Stack navigation items vertically */
-      align-items: center;
-      overflow: hidden;
-      gap: 20px;
-    }
-  
-    #navbar ul li a {
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
-  
-    header#landing h1 {
-      font-size: 2rem;
-    }
-  
-    .gallery {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller images in the grid */
-    }
-  
-    .gallery-item img {
-      border-width: 1px; /* Thin borders for smaller images */
-    }
-  
-    #booking iframe,
-    #calendly-scheduler {
-      width: 100%; /* Ensure full width for the Calendly widget */
-    }
-  }
-
-  /* Small screens: Only show header on initial load */
-@media (max-width: 768px) {
-    section:not(header) {
-      display: none;
-    }
-  }
-  
-  /* When scrolling, reveal hidden sections */
-  body.scrolled section {
+  .menu-toggle {
     display: block;
   }
-  
-  /* Extra Small Devices (Phones) */
-  @media (max-width: 480px) {
-    #navbar ul {
-        flex-direction: row; /* Stack navigation items vertically */
-        align-items: center;
-        overflow: hidden;
-        gap: 5px;
-      }
+}
 
-    header#landing h1 {
-      font-size: 1.8rem; /* Reduce header font size */
-    }
-  
-    header#landing p {
-      font-size: 1rem; /* Adjust subtitle font size */
-    }
-  
-    .btn {
-      padding: 0.5rem 1rem; /* Smaller buttons */
-      font-size: 0.9rem;
-    }
-  
-    .gallery {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller grid items */
-    }
-  
-    footer p {
-      font-size: 0.8rem; /* Smaller footer text */
-    }
-  
-    footer .social-icons a {
-      font-size: 1rem; /* Smaller social icons */
-    }
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-brand {
+    margin-left: 0; /* Reset margin for smaller screens */
   }
-  
-  /* Medium Devices (Laptops and Desktops) */
-  @media (min-width: 1024px) {
-    #navbar ul {
-        flex-direction: row; /* Stack navigation items vertically */
-        align-items: center;
-        overflow: hidden;
-        gap: 100px;
-      }
-  
-    header#landing h1 {
-      font-size: 3rem; /* Larger font size for desktops */
-    }
-  
-    .gallery {
-      grid-template-columns: repeat(4, 1fr); /* Four columns for larger screens */
-    }
-  }
-  
-  /* Large Devices (Extra Wide Screens) */
-  @media (min-width: 1440px) {
-    #navbar ul {
-        flex-direction: row; /* Stack navigation items vertically */
-        align-items: center;
-        overflow: hidden;
-        gap: 100px;
-      }
 
-    header#landing h1 {
-      font-size: 4rem; /* Max header size for very large screens */
-    }
-  
-    .gallery {
-      grid-template-columns: repeat(5, 1fr); /* Five columns for extra wide screens */
-    }
-  
-    footer {
-      font-size: 1.2rem; /* Slightly larger footer text */
-    }
+  .navbar-brand img.logo {
+    width: 40px;
   }
+
+  .navbar-brand span {
+    font-size: 1rem;
+  }
+}
