@@ -150,3 +150,8 @@ if (galleryItems.length > 0) {
     }
   }
 });
+
+/** ==============================
+ * 8. Fade-In Effect on Page Load
+ ============================== **/
+ document.body.classList.add('loaded');

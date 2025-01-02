@@ -18,6 +18,17 @@ main {
   width: 100%;
 }
 
+/* Fade-In Effect for the Entire Page */
+body {
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 1.5s ease-in-out; /* Smooth transition */
+}
+
+/* When Page is Loaded */
+body.loaded {
+  opacity: 1; /* Fully visible */
+}
+
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700&display=swap');
 
