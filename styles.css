@@ -45,20 +45,21 @@ section {
 #landing h1 {
   font-family: 'Roboto', serif; /* Stylish serif font */
   font-size: 3rem; /* Adjust size as needed */
-  color: red;
+  color: white;
   text-transform: uppercase; /* Optional: Makes the text uppercase */
   text-align: center;
   letter-spacing: 2px; /* Adds spacing between letters */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Creates a shadow effect */
-  background: linear-gradient(90deg, #ff0000, #8b0000); /* Gradient text effect */
+  background: linear-gradient(90deg, white, #797676); /* Gradient text effect */
   -webkit-background-clip: text; /* Clips the background to the text */
   -webkit-text-fill-color: transparent; /* Makes the gradient visible */
 }
 
 #landing h1:hover {
-  text-shadow: 4px 4px 10px rgba(255, 0, 0, 0.9); /* Larger shadow on hover */
+  text-shadow: 4px 4px 10px #797676(255, 0, 0, 0.9); /* Larger shadow on hover */
   transform: scale(1.1); /* Slightly enlarge the text */
   transition: all 0.3s ease-in-out; /* Smooth transition */
+  cursor: pointer;
 }
   
 #landing p {
@@ -70,35 +71,47 @@ section {
   letter-spacing: 1px; /* Add slight spacing between letters */
   line-height: 1.6; /* Improve readability by increasing line height */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for depth */
-  background: linear-gradient(90deg, #ff0000, #ff6600);
+  background: linear-gradient(90deg, white, #797676);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Optional: Add hover effect for fun interactivity */
 #landing p:hover {
-  color: #ff0000; /* Change color on hover */
+  color: #797676; /* Change color on hover */
   transition: color 0.3s ease-in-out; /* Smooth transition for color change */
 }
 
-  .scroll-indicator {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.2rem;
-    color: #8b0000;
-    animation: bounce 2s infinite;
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translate(-50%, 0);
-    }
-    50% {
-      transform: translate(-50%, 10px);
-    }
-  }
+/* Gray and White Button Style */
+.btn-gray-white {
+  background: linear-gradient(90deg, #d1d1d1, #f5f5f5); /* Gradient from light gray to white */
+  color: #333; /* Dark gray text */
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+/* Hover Effect */
+.btn-gray-white:hover {
+  transform: scale(1.1); /* Enlarge button by 10% */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  cursor: pointer;
+}
+
+/* Active State (when clicked) */
+.btn-gray-white:active {
+  transform: scale(1.05); /* Slightly smaller when clicked */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Slight shadow reduction */
+}
   
   #navbar {
     position: sticky;
@@ -187,10 +200,73 @@ section {
     cursor: pointer;
   }
 
+  /* booking */
+
   #booking {
     padding: 3rem 1.5rem;
     text-align: center;
   }
+
+  /* payment */
+
+  #payment-form {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  #card-element {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+  }
+  
+  #submit-payment {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #payment-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: green;
+  }
+
+  .alternative-payment-methods {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#apple-pay-button button,
+#google-pay-button button {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#apple-pay-button button {
+  background: #000;
+  color: #fff;
+}
+
+#google-pay-button button {
+  background: #4285F4;
+  color: #fff;
+}
+  
+  .hidden {
+    display: none;
+  }
+
+  /* calendly */
   
   #calendly-scheduler {
     margin: 0 auto;
@@ -199,6 +275,8 @@ section {
     border-radius: 10px;
     overflow: hidden;
   }
+
+  /* Footer Styling */
   
   footer {
     text-align: center;

@@ -12,13 +12,16 @@
   <header id="landing">
     <div class="overlay"></div>
     <div class="landing-content">
-      <h1>Black Lotus Tattoo Studio</h1>
+      <h1><a href="https://calendly.com/your-calendly-link" target="_blank" class="h1-link">
+        Black Lotus Tattoo Studio</a></h1>
       <br>
       <br>
       <p>Where Art Meets Skin</p>
-      </div>
-    <div class="scroll-indicator">▼ Scroll Down ▼</div>
-  </header>
+      <br>
+      <a href="#portfolio" class="btn btn-gray-white mt-4">Discover</a>    
+    </div>
+
+    </header>
 
   <!-- Navbar -->
   <nav id="navbar">
@@ -71,11 +74,30 @@
 
 <!-- Booking Section -->
 <section id="booking">
-    <h2>Book an Appointment</h2>
+  <section id="booking">
+    <h2>Schedule Your Free <Cite></Cite>onsultation</h2>
     <div id="calendly-scheduler">
-      <!-- Calendly embed code -->
       <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-link" style="min-width:320px;height:630px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+      <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+    </div>
+  
+    <h3 class="mt-4">Secure Your Appointment with a Deposit</h3>
+    <p>Pay a $50 deposit to confirm your booking.</p>
+  
+    <!-- Stripe Payment Form -->
+    <div id="payment-form">
+      <form id="payment-form">
+        <div id="card-element"></div>
+        <button id="submit-payment" class="btn btn-gray-white mt-4">Pay $50 Deposit</button>
+        <p id="payment-message" class="hidden"></p>
+      </form>
+    </div>
+  
+    <!-- Apple Pay and Google Pay Buttons -->
+    <div class="alternative-payment-methods">
+      <h4>Or Pay Using</h4>
+      <div id="apple-pay-button"></div>
+      <div id="google-pay-button"></div>
     </div>
   </section>
 
@@ -102,6 +124,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
 </body>
 </html>

@@ -63,3 +63,55 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+// Front end code for the payment form
+
+const stripe = Stripe('pk_test_your_publishable_key'); // Replace with your Publishable Key
+
+const elements = stripe.elements();
+const cardElement = elements.create('card');
+cardElement.mount('#card-element');
+
+const paymentForm = document.getElementById('payment-form');
+const paymentMessage = document.getElementById('payment-message');
+
+paymentForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const { clientSecret } = await fetch('http://localhost:3000/create-payment-intent', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({}),
+  }).then((res) => res.json());
+
+  const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+    payment_method: {
+      card: cardElement,
+    },
+  });
+
+  if (error) {
+    paymentMessage.textContent = `Error: ${error.message}`;
+    paymentMessage.style.color = 'red';
+    paymentMessage.classList.remove('hidden');
+  } else if (paymentIntent.status === 'succeeded') {
+    paymentMessage.textContent = 'Payment successful! Your deposit has been secured.';
+    paymentMessage.style.color = 'green';
+    paymentMessage.classList.remove('hidden');
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Check for Apple Pay Support
+  if (window.ApplePaySession) {
+    const applePayButton = document.getElementById('apple-pay-button');
+    applePayButton.innerHTML = '<button class="btn btn-apple-pay">Pay with Apple Pay</button>';
+  }
+
+  // Check for Google Pay Support
+  if (window.PaymentRequest) {
+    const googlePayButton = document.getElementById('google-pay-button');
+    googlePayButton.innerHTML = '<button class="btn btn-google-pay">Pay with Google Pay</button>';
+  }
+});
+
