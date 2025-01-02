@@ -73,8 +73,8 @@ header#landing .landing-content {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  background: linear-gradient(90deg, white, #797676);
+  text-shadow: 2px 2px 5px rgba(77, 76, 76, 0.8);
+  background: linear-gradient(90deg, white, #c9c2c2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
