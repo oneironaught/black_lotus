@@ -33,8 +33,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /** ==============================
+ * 4. Collapse Mobile Navbar on Link Click
+ ============================== **/
+const navbarLinks = document.querySelectorAll("#navbar-menu a");
+
+if (menuToggle && navbarMenu) {
+  navbarLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navbarMenu.classList.contains("active")) {
+        navbarMenu.classList.remove("active"); // Collapse the menu
+      }
+    });
+  });
+
+  // Close menu if user clicks outside the navbar menu
+  document.addEventListener("click", (e) => {
+    if (
+      !navbarMenu.contains(e.target) &&
+      !menuToggle.contains(e.target) &&
+      navbarMenu.classList.contains("active")
+    ) {
+      navbarMenu.classList.remove("active");
+    }
+  });
+}
+
  /** ==============================
- * 4. Lightbox for Gallery
+ * 5. Lightbox for Gallery
  ============================== **/
 
 const galleryItems = document.querySelectorAll(".gallery-item img");
@@ -85,7 +111,7 @@ if (galleryItems.length > 0) {
 }
 
   /** ==============================
-   * 5. Add 'Scrolled' Class on Scroll
+   * 6. Add 'Scrolled' Class on Scroll
    ============================== **/
   const body = document.body;
   window.addEventListener("scroll", () => {
@@ -95,7 +121,7 @@ if (galleryItems.length > 0) {
   });
 
   /** ==============================
-   * 6. Stripe Payment Integration
+   * 7. Stripe Payment Integration
    ============================== **/
   const stripe = Stripe('pk_test_your_publishable_key'); // Replace with your Publishable Key
   const elements = stripe.elements();
@@ -134,7 +160,7 @@ if (galleryItems.length > 0) {
   }
 
   /** ==============================
-   * 7. Apple Pay & Google Pay Integration
+   * 8. Apple Pay & Google Pay Integration
    ============================== **/
   if (window.ApplePaySession) {
     const applePayButton = document.getElementById('apple-pay-button');
@@ -152,6 +178,6 @@ if (galleryItems.length > 0) {
 });
 
 /** ==============================
- * 8. Fade-In Effect on Page Load
+ * 9. Fade-In Effect on Page Load
  ============================== **/
  document.body.classList.add('loaded');

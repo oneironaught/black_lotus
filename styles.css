@@ -153,6 +153,8 @@ header#landing .landing-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  margin-left: 3rem; /* Adjust as needed */
+
 }
 
 /* Navbar Links */
@@ -160,6 +162,7 @@ header#landing .landing-content {
   list-style: none;
   display: flex;
   gap: 1rem;
+  margin-left: 2rem; /* Shift menu items to the right */
 }
 
 #navbar ul li a {
@@ -174,6 +177,7 @@ header#landing .landing-content {
 }
 
 /* Mobile Navbar Toggle */
+
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -225,6 +229,7 @@ header#landing .landing-content {
   gap: 1rem;
   margin: 0;
   padding: 0;
+  margin-right: -10rem; /* Adjust as needed */
 }
 
 #navbar-menu li {
@@ -551,5 +556,23 @@ footer p {
 
   .navbar-brand span {
     font-size: 1rem;
+  }
+}
+
+/* Navbar Menu Toggle (Mobile Only) */
+@media (max-width: 768px) {
+  #navbar ul {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  #navbar ul.active {
+    display: flex; /* Visible when toggled */
   }
 }
