@@ -33,41 +33,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /** ==============================
-   * 4. Lightbox for Gallery
-   ============================== **/
-  const galleryItems = document.querySelectorAll(".gallery-item img");
-  if (galleryItems.length > 0) {
-    const lightbox = document.createElement("div");
-    lightbox.classList.add("lightbox");
+ /** ==============================
+ * 4. Lightbox for Gallery
+ ============================== **/
 
-    const lightboxImage = document.createElement("img");
-    lightbox.appendChild(lightboxImage);
+const galleryItems = document.querySelectorAll(".gallery-item img");
+if (galleryItems.length > 0) {
+  // Create the lightbox only once
+  const lightbox = document.createElement("div");
+  lightbox.classList.add("lightbox");
 
-    const closeButton = document.createElement("div");
-    closeButton.classList.add("lightbox-close");
-    closeButton.textContent = "×";
-    lightbox.appendChild(closeButton);
+  const lightboxImage = document.createElement("img");
+  lightbox.appendChild(lightboxImage);
 
-    document.body.appendChild(lightbox);
+  const closeButton = document.createElement("div");
+  closeButton.classList.add("lightbox-close");
+  closeButton.textContent = "×";
+  lightbox.appendChild(closeButton);
 
-    galleryItems.forEach((img) => {
-      img.addEventListener("click", () => {
-        lightboxImage.src = img.src;
-        lightbox.classList.add("active");
-      });
+  document.body.appendChild(lightbox);
+
+  // Open Lightbox
+  galleryItems.forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImage.src = img.src; // Set the lightbox image source
+      lightbox.classList.add("active"); // Show the lightbox
+      document.body.style.overflow = 'hidden'; // Disable background scroll
     });
+  });
 
-    closeButton.addEventListener("click", () => {
-      lightbox.classList.remove("active");
-    });
+  // Close Lightbox
+  const closeLightbox = () => {
+    lightbox.classList.remove("active"); // Hide the lightbox
+    lightboxImage.src = ""; // Clear the image source
+    document.body.style.overflow = ''; // Restore background scroll
+  };
 
-    lightbox.addEventListener("click", (e) => {
-      if (e.target !== lightboxImage && e.target !== closeButton) {
-        lightbox.classList.remove("active");
-      }
-    });
-  }
+  closeButton.addEventListener("click", closeLightbox);
+
+  // Close Lightbox by clicking outside the image
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox || e.target === closeButton) {
+      closeLightbox();
+    }
+  });
+
+  // Prevent image click from closing the lightbox
+  lightboxImage.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+}
 
   /** ==============================
    * 5. Add 'Scrolled' Class on Scroll

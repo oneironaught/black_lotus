@@ -12,16 +12,13 @@
   <header id="landing">
     <div class="overlay"></div>
     <div class="landing-content">
-      <h1><a href="https://calendly.com/your-calendly-link" target="_blank" class="h1-link">
-        Black Lotus Tattoo Studio</a></h1>
-      <br>
-      <br>
+      <h1>
+        <a href="https://calendly.com/your-calendly-link" target="_blank" class="h1-link">Black Lotus Tattoo Studio</a>
+      </h1>
       <p>Where Art Meets Skin</p>
-      <br>
       <a href="#portfolio" class="btn btn-gray-white mt-4">Discover</a>    
     </div>
-
-    </header>
+  </header>
 
   <!-- Navbar -->
   <nav id="navbar">
@@ -69,29 +66,25 @@
     <h2>Meet Our Artists</h2>
     <div class="artists">
       <div class="artist">
-        <img src="artist1.jpg" alt="Artist 1">
+        <img src="assets/images/artist1.jpg" alt="Artist 1">
         <h3>Artist Name 1</h3>
       </div>
       <div class="artist">
-        <img src="artist2.jpg" alt="Artist 2">
+        <img src="assets/images/artist2.jpg" alt="Artist 2">
         <h3>Artist Name 2</h3>
       </div>
     </div>
   </section>
 
-<!-- Booking Section -->
-<section id="booking">
+  <!-- Booking Section -->
   <section id="booking">
-    <h2>Schedule Your Free <Cite></Cite>Consultation</h2>
+    <h2>Schedule Your Free Consultation</h2>
     <div id="calendly-scheduler">
       <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-link" style="min-width:320px;height:630px;"></div>
       <script src="https://assets.calendly.com/assets/external/widget.js"></script>
     </div>
-  
-    <h3 class="mt-4">Secure Your Appointment with a Deposit</h3>
+    <h3>Secure Your Appointment with a Deposit</h3>
     <p>Pay a $50 deposit to confirm your booking.</p>
-  
-    <!-- Stripe Payment Form -->
     <div id="payment-form">
       <form id="payment-form">
         <div id="card-element"></div>
@@ -99,8 +92,6 @@
         <p id="payment-message" class="hidden"></p>
       </form>
     </div>
-  
-    <!-- Apple Pay and Google Pay Buttons -->
     <div class="alternative-payment-methods">
       <h4>Or Pay Using</h4>
       <div id="apple-pay-button"></div>
@@ -111,26 +102,20 @@
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <div class="contact-info">
-      <p><i class="fas fa-map-marker-alt"></i> 218 N Texas Blvd, Weslaco TX, 78596</p>
-      <p><i class="fas fa-phone"></i> (956) 532-4231</p>
-      <p><i class="fas fa-envelope"></i> contact@blacklotustattoos.com</p>
-    </div>
+    <p><i class="fas fa-map-marker-alt"></i> 218 N Texas Blvd, Weslaco TX, 78596</p>
+    <p><i class="fas fa-phone"></i> (956) 532-4231</p>
+    <p><i class="fas fa-envelope"></i> contact@blacklotustattoos.com</p>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="footer-logo">
-        <img src="assets/images/black_lotus_logo.jpg" alt="Black Lotus Tattoo Studio Logo">
-      </div>
-    <p>&copy; 2024 Black Lotus Tattoo Studio</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/blacklotus956/"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/memellanos_tattoo/"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+      <img src="assets/images/black_lotus_logo.jpg" alt="Logo">
     </div>
+    <p>&copy; 2024 Black Lotus Tattoo Studio</p>
   </footer>
-<script src="script.js"></script>
-<script src="https://js.stripe.com/v3/"></script>
+
+  <script src="script.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
 </body>
 </html>
