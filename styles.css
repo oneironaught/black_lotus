@@ -425,6 +425,30 @@ header#landing .landing-content {
 /* ==============================
    8. Contact Styling
 ================================= */
+.address-link {
+  color: gray;
+  text-decoration: none;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.address-link:hover {
+  color: #02cdbf; /* Green hover effect */
+  text-decoration: underline;
+}
+
+.phone-link {
+  color: gray;
+  text-decoration: none;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.phone-link:hover {
+  color: #02cdbf; /* Green color on hover */
+  text-decoration: underline;
+}
+
 .email-link {
   color: gray;
   text-decoration: none;
