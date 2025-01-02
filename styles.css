@@ -356,6 +356,7 @@ header#landing .landing-content {
   background: #f9f9f9; /* Light background for contrast */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: solid 1px rgba(0, 0, 0, 0.1); /* Light border */
 }
 
 /* Card Element Styling */
@@ -365,6 +366,13 @@ header#landing .landing-content {
   padding: 10px;
   margin-bottom: 1rem;
   background-color: #fff;
+}
+
+/* Deposit Section Styling */
+
+.deposit-section h3,
+.deposit-section p {
+  color: black; /* Targets h3 and p within .deposit-section */
 }
 
 /* Submit Button Styling */

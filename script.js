@@ -181,3 +181,17 @@ if (galleryItems.length > 0) {
  * 9. Fade-In Effect on Page Load
  ============================== **/
  document.body.classList.add('loaded');
+
+ /** ==============================
+ * 10. Sticky Navbar on Scroll
+ ============================== **/
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > window.innerHeight) {
+    navbar.style.position = 'sticky';
+    navbar.style.top = '0';
+    navbar.style.zIndex = '1000';
+  } else {
+    navbar.style.position = 'relative';
+  }
+});
