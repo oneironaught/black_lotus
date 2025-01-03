@@ -45,7 +45,7 @@ section {
 header#landing {
   position: relative;
   height: 100vh;
-  background: url('assets/images/black_lotus_logo.jpg') center/cover no-repeat;
+  background: url('assets/images/black_lotus_logo.jpg') center/70% auto no-repeat;
 }
 
 header#landing .overlay {
@@ -138,11 +138,12 @@ header#landing .landing-content {
 ================================= */
 #navbar {
   position: sticky; /* Ensures it stays at the top */
-  top: 0;
+  top: 0px;
   z-index: 1000; /* High z-index to ensure it's always on top */
   background-color: #111;
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 /* Navbar Container */

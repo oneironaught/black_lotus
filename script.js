@@ -12,7 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /** ==============================
-   * 2. Booking Form Submission
+ * 2. Sticky Navbar on Scroll
+ ============================== **/
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > window.innerHeight) {
+    navbar.style.position = 'fixed';
+    navbar.style.top = '0';
+    navbar.style.zIndex = '1000';
+  } else {
+    navbar.style.position = 'relative';
+  }
+}); 
+
+  /** ==============================
+   * 3. Booking Form Submission
    ============================== **/
   const bookingForm = document.getElementById("booking-form");
   if (bookingForm) {
@@ -23,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /** ==============================
-   * 3. Navbar Toggle (Mobile Menu)
+   * 4. Navbar Toggle (Mobile Menu)
    ============================== **/
   const menuToggle = document.getElementById('menu-toggle');
   const navbarMenu = document.getElementById('navbar-menu');
@@ -34,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /** ==============================
- * 4. Collapse Mobile Navbar on Link Click
+ * 5. Collapse Mobile Navbar on Link Click
  ============================== **/
 const navbarLinks = document.querySelectorAll("#navbar-menu a");
 
@@ -60,7 +74,7 @@ if (menuToggle && navbarMenu) {
 }
 
  /** ==============================
- * 5. Lightbox for Gallery
+ * 6. Lightbox for Gallery
  ============================== **/
 
 const galleryItems = document.querySelectorAll(".gallery-item img");
@@ -111,7 +125,7 @@ if (galleryItems.length > 0) {
 }
 
   /** ==============================
-   * 6. Add 'Scrolled' Class on Scroll
+   * 7. Add 'Scrolled' Class on Scroll
    ============================== **/
   const body = document.body;
   window.addEventListener("scroll", () => {
@@ -121,7 +135,7 @@ if (galleryItems.length > 0) {
   });
 
   /** ==============================
-   * 7. Stripe Payment Integration
+   * 8. Stripe Payment Integration
    ============================== **/
   const stripe = Stripe('pk_test_your_publishable_key'); // Replace with your Publishable Key
   const elements = stripe.elements();
@@ -160,7 +174,7 @@ if (galleryItems.length > 0) {
   }
 
   /** ==============================
-   * 8. Apple Pay & Google Pay Integration
+   * 9. Apple Pay & Google Pay Integration
    ============================== **/
   if (window.ApplePaySession) {
     const applePayButton = document.getElementById('apple-pay-button');
@@ -178,20 +192,6 @@ if (galleryItems.length > 0) {
 });
 
 /** ==============================
- * 9. Fade-In Effect on Page Load
+ * 10. Fade-In Effect on Page Load
  ============================== **/
  document.body.classList.add('loaded');
-
- /** ==============================
- * 10. Sticky Navbar on Scroll
- ============================== **/
-window.addEventListener('scroll', () => {
-  const navbar = document.getElementById('navbar');
-  if (window.scrollY > window.innerHeight) {
-    navbar.style.position = 'sticky';
-    navbar.style.top = '0';
-    navbar.style.zIndex = '1000';
-  } else {
-    navbar.style.position = 'relative';
-  }
-});
