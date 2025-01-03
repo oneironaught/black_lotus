@@ -166,7 +166,7 @@ header#landing .landing-content {
   list-style: none;
   display: flex;
   gap: 1rem;
-  margin-left: 2rem; /* Shift menu items to the right */
+  margin-right: -5rem; /* Shift menu items to the right */
 }
 
 #navbar ul li a {
@@ -535,46 +535,46 @@ footer p {
   overflow: hidden;
 }
 
+/* ==============================
+   10. Media Queries
+================================= */
+/* General Mobile Styles */
 @media (max-width: 768px) {
-  #navbar-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #111;
-    padding: 1rem;
+  body, html {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
   }
 
-  #navbar-menu.active {
-    display: flex;
+  html {
+    overflow-x: hidden;
   }
 
-  .menu-toggle {
-    display: block;
-  }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .navbar-brand {
-    margin-left: 0; /* Reset margin for smaller screens */
+  header#landing {
+    background-size: cover; /* Adjust image scaling */
+    background-position: center;
+    height: 100vh;
   }
 
-  .navbar-brand img.logo {
-    width: 40px;
+  #landing h1 {
+    font-size: 2rem;
   }
 
-  .navbar-brand span {
+  #landing p {
     font-size: 1rem;
   }
-}
 
-/* Navbar Menu Toggle (Mobile Only) */
-@media (max-width: 768px) {
+  .btn-gray-white {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .navbar-container {
+    padding: 0.5rem;
+  }
+
   #navbar ul {
-    display: none; /* Hidden by default on mobile */
+    display: none;
     flex-direction: column;
     background: #111;
     position: absolute;
@@ -585,6 +585,227 @@ footer p {
   }
 
   #navbar ul.active {
-    display: flex; /* Visible when toggled */
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand img.logo {
+    width: 40px;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+
+  .gallery-item img {
+    height: auto;
+  }
+
+  #payment-form {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+
+  footer .footer-logo img {
+    max-width: 80px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 576px) {
+
+  #landing h1 {
+    font-size: 1.8rem;
+  }
+
+  #landing p {
+    font-size: 0.9rem;
+  }
+
+  .btn-gray-white {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .navbar-container {
+    padding: 0.3rem;
+  }
+
+  #navbar ul {
+    font-size: 0.9rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for very small screens */
+  }
+
+  .artist img {
+    max-width: 70%;
+  }
+
+  #payment-form {
+    max-width: 90%;
+    padding: 0.8rem;
+  }
+
+  footer .footer-logo img {
+    max-width: 70px;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 991px) {
+  #navbar {
+    position: sticky;
+    top: 0;
+  }
+
+  #navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  #navbar ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  header#landing {
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+  }
+
+  #landing h1 {
+    font-size: 2.5rem;
+  }
+
+  #landing p {
+    font-size: 1.1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+  }
+
+  .artists {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .artist img {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  #payment-form {
+    max-width: 80%;
+    padding: 1rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Desktop and Laptop Styles */
+@media (max-width: 1199px) {
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+
+  #navbar ul {
+    gap: 0.8rem;
+  }
+
+  #landing h1 {
+    font-size: 3rem;
+  }
+
+  #landing p {
+    font-size: 1.2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktops */
+  }
+
+  .artist img {
+    max-width: 80%;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #landing h1 {
+    font-size: 3.5rem;
+  }
+
+  #landing p {
+    font-size: 1.3rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for large screens */
+  }
+
+  .artist img {
+    max-width: 90%;
+  }
+
+  #payment-form {
+    max-width: 50%;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+}
+
+
+/* Responsive Navbar Menu Toggle */
+@media (max-width: 768px) {
+  #navbar {
+    position: sticky;
+    top: 0;
+    background-color: #111;
   }
 }
