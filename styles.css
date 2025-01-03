@@ -9,7 +9,10 @@ body, html {
   background-color: #000;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+html {
+  overflow-x: hidden;
 }
 
 main {

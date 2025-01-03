@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /** ==============================
  * 2. Sticky Navbar on Scroll
- ============================== **/
+ ============================== 
 window.addEventListener('scroll', () => {
   const navbar = document.getElementById('navbar');
   if (window.scrollY > window.innerHeight) {
@@ -23,7 +23,7 @@ window.addEventListener('scroll', () => {
   } else {
     navbar.style.position = 'relative';
   }
-}); 
+}); **/
 
   /** ==============================
    * 3. Booking Form Submission
