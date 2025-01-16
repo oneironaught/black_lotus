@@ -76,7 +76,7 @@ header#landing .landing-content {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  text-shadow: 2px 2px 5px rgba(77, 76, 76, 0.8);
+  text-shadow: 2px 2px 5px rgba(145, 143, 143, 0.8);
   background: linear-gradient(90deg, white, #c9c2c2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
